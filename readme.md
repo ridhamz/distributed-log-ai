@@ -1,4 +1,4 @@
-# Distributed Log Processing with AI Agents
+# Distributed Log Processing with AI Agent
 
 ## 📖 Overview
 
