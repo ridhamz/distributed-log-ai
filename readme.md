@@ -19,18 +19,7 @@ It is designed to handle large volumes of log data in **real time**, detect anom
 
 ## 🏗 Architecture
 
-```mermaid
-flowchart TD
-    A["Log Source: Apps/Servers"] -->|Send logs| B["Log Ingestion API (Express & TypeScript)"]
-    B -->|Push| C["SQS Queue"]
-    C --> D["Worker Service (Node.js Consumers)"]
-    D -->|Metadata| E["DynamoDB"]
-    D -->|Send log snippet| F["Claude AI API"]
-    F -->|Anomaly Detection| D
-    D -->|Critical Alert| G["SNS Topic → Email Alerts"]
-    D --> H["Monitoring / API Layer"]
-    H --> I["Dashboard / Grafana / React Frontend"]
-```
+![AWS Architecture](./docs/arch.png)
 
 ---
 
